@@ -171,7 +171,7 @@ export function Info() {
                       <div key={j} className="info-storno">
                         <strong className="info-storno__title">{item.title}</strong>
                         <ul className="info-storno__list">
-                          {item.items.map((row, i) => (
+                          {(item.items ?? []).map((row, i) => (
                             <li key={i}>
                               <span className="info-storno__period">{row.period}</span>
                               <span className="info-storno__note">{row.note}</span>
