@@ -25,7 +25,7 @@ export function Hero() {
         >
           59. Internationaler
           <br />
-          Sportmedizin Kongress
+          Kongress für Sportmedizin
         </motion.h1>
         <motion.p
           className="hero__subtitle"

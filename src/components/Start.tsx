@@ -84,7 +84,7 @@ export function Start() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            Die Schwerpunkte des Kongresses <span className="subsection-title__muted">umfassen:</span>
+            Die Schwerpunkte des Kongresses umfassen
           </motion.h3>
           <motion.ul
             className="welcome__list"
