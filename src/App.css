@@ -105,6 +105,10 @@
   margin-bottom: 20px;
 }
 
+.hero__title .hero__title-word--lowercase {
+  text-transform: lowercase !important;
+}
+
 .hero__subtitle {
   font-family: var(--font-body);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -296,6 +300,11 @@
 
 .subsection-title--small {
   font-size: 0.95rem;
+}
+
+.welcome__schwerpunkte.subsection-title--small {
+  text-transform: none;
+  font-weight: 700;
 }
 
 .subsection-title__muted {
