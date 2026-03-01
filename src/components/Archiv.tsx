@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const ARCHIV_ITEMS: { year: number; href: string }[] = [
-  { year: 2025, href: '#' },
+  { year: 2025, href: '/archiv/Programmheft2025.pdf' },
   { year: 2024, href: '/archiv/Programmheft2024.pdf' },
   { year: 2023, href: '/archiv/Programmheft2023.pdf' },
   { year: 2020, href: '/archiv/Programmheft2020.pdf' },
