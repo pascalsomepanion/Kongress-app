@@ -22,7 +22,7 @@ export function Anmeldung() {
         >
           <div className="anmeldung-intro">
             <p className="anmeldung-intro__lead">
-              Die Anmeldung für den Sportmedizin Kongress 2026 wird bald verfügbar sein.
+              Die Anmeldung für den Sportmedizin Kongress 2027 wird bald verfügbar sein.
             </p>
             <p className="anmeldung-intro__main">
               Die Anmeldung zum Grundkurs LIP, den Theorie- und Praxisseminaren, den Workshops, dem Ärztesport sowie dem Reinhard-Suckert-Symposium ist über unser Buchungsportal möglich.
