@@ -111,12 +111,12 @@ export function Header() {
 
         .header.scrolled .header__date {
           color: var(--primary) !important;
-          text-shadow: none;
+          
         }
 
         .header.scrolled .header__link {
           color: var(--navy);
-          text-shadow: none;
+          
         }
 
         .header.scrolled .header__link:hover {
@@ -178,7 +178,7 @@ export function Header() {
           font-size: 13px;
           letter-spacing: 0.2em;
           text-transform: capitalize;
-          color: white;
+          color: var(--navy);
           border-radius: 10px;
           transition: all 0.2s ease;
           text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3);
@@ -192,11 +192,13 @@ export function Header() {
         .header__link--highlight {
           color: var(--primary) !important;
           font-weight: 700;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.4);
         }
 
         .header.scrolled .header__link--highlight {
           color: var(--primary) !important;
           font-weight: 700;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.4) !important;
         }
 
         .header__menu-btn {

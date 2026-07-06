@@ -5,7 +5,7 @@ const INFO_BLOCKS = [
   {
     title: 'Wissenschaftliches Programm',
     reverse: false,
-    image: '/heft.png',
+    image: '/booklet.png',
     content: [
       'Die Teilnahme am Grundkurs LIP, an den Theorie- und Praxisseminaren sowie am Workshop ist Ärztinnen und Ärzten vorbehalten.',
       'Das Reinhard-Suckert-Symposium kann nur als Block gebucht werden. Tageskarten sind nicht erhältlich.',
@@ -17,7 +17,7 @@ const INFO_BLOCKS = [
   {
     title: 'Praxisseminar Schi Alpin & Ärztesport',
     reverse: true,
-    image: '/skifahrer.png',
+    image: '/ski.png',
     content: [
       'Das Praxisseminar Schi Alpin und Ärztesport kann nur gemeinsam und in Kombination mit einer weiteren Fortbildungseinheit gebucht und bestätigt werden. Die Teilnahme am Praxisseminar Schi Alpin und Ärztesport erfolgt unter der Leitung der Skilehrer der Ski Austria Academy und ist ausschließlich den Gästen derselben vorbehalten.',
       'Die Kosten hierfür sind bereits im Zimmerpreis inkludiert. Bitte reservieren Sie daher rechtzeitig Ihre Hotelunterkunft, da in der Ski Austria Academy ein limitiertes Zimmerkontingent zur Verfügung steht. Für nähere Informationen hierzu wenden Sie sich bitte direkt an die Ski Austria Academy.',
@@ -26,7 +26,7 @@ const INFO_BLOCKS = [
   {
     title: 'Schipass',
     reverse: false,
-    image: '/lift.png',
+    image: '/ticket.png',
     content: [
       'Die Liftgebühren sind in den Kongressgebühren nicht inbegriffen. Liftkarten müssen eigenständig an den Verkaufsstellen erworben werden und bereits bei der Gruppeneinteilung zum Praxisseminar Ski Alpin und Ärztesport vorhanden sein. Es besteht die Möglichkeit, 5-Tages-Ski-Pässe im Zuge der Zimmerreservierung bei der Ski Austria Academy vorzubestellen. Wenn Sie den Preis für den Schipass (zzgl. der Depotgebühr für die Chipkarte) zusammen mit der Anzahlung für das Hotelzimmer an die Ski Austria Academy überweisen, bekommen Sie den Schipass beim Einchecken im Hotel ausgehändigt.',
       'Alle benötigten Sportgeräte (Schi, Schuhe, Stöcke etc.) und die entsprechende Sportbekleidung sind selbst mitzubringen. Bitte erscheinen Sie pünktlich in kompletter Ausrüstung zum Praxisseminar Schi Alpin und zum Ärztesport. Die Pausen während dieser Kurse werden jeweils in den Gruppen festgelegt. Die Ausübung von Sport abseits der Pisten ist abhängig von der Schnee- und Wetterlage.',
@@ -63,9 +63,9 @@ const INFO_BLOCKS = [
         type: 'storno',
         title: 'Stornogebühren',
         items: [
-          { period: 'Bis einschließlich 31.12.2025', note: 'keine Stornogebühren' },
-          { period: '1.1. – 31.1.2026', note: '50% Refundierung des einbezahlten Betrages' },
-          { period: 'Ab 1.2.2026', note: 'keine Rückerstattung (buchhalterische Gründe)' },
+          { period: 'bis einschließlich 31.12.2025', note: '100% Refundierung' },
+          { period: '1.1. – 31.1.2026', note: '50% Refundierung' },
+          { period: 'Ab 1.2.2026', note: 'keine Rückerstattung' },
         ],
       },
       { type: 'notice', text: 'Wir weisen darauf hin, dass der Veranstalter, die Referenten und die Trainer keine wie immer geartete Haftung gegenüber den Teilnehmern oder dritten Personen übernehmen. Die Teilnahme an den Sportveranstaltungen erfolgt auf eigene Gefahr. Der Abschluss einer Haftpflicht- bzw. Unfallversicherung wird empfohlen!' },
@@ -74,7 +74,7 @@ const INFO_BLOCKS = [
   {
     title: 'Zimmer-Reservierung',
     reverse: true,
-    image: '/zimmer.png',
+    image: '/hotel.png',
     content: [
       'Zimmer können ab sofort in der Ski Austria Academy St. Christoph am Arlberg reserviert werden. Für die Kongressteilnehmer wurde ein begrenztes Zimmerkontingent (n = 155 mit Zahlungsfrist bis 1.1.2026) vorgemerkt. Die Zimmerreservierung (nach dem Prinzip „first come, first serve“) hat selbständig durch die KongressteilnehmerInnen zu erfolgen.',
       'Mehr Details zur Zimmerreservierung erfahren Sie auf der Website www.skiakademie.at',

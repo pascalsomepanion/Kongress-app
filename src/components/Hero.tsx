@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { ScrollIndicator } from './ScrollIndicator';
 
-const HERO_IMAGE = '/hero-bild.png';
+const HERO_IMAGE = '/DSC01673.png';
 
 export function Hero() {
   return (
