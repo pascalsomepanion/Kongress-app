@@ -95,7 +95,7 @@ export function Programm() {
             <img src="/logo-contact.png" alt="Sportmedizin Arlberg" />
           </a>
           <div className="programm-intro-block__text">
-            <p className="programm-intro">Der Schwerpunkt und das Thema des diesjährigen Kongresses im Jahr 2026 ist:</p>
+            <p className="programm-intro">Der Schwerpunkt und das Thema des diesjährigen Kongresses im Jahr 2027 ist:</p>
             <p className="theme-quote">„Adipositas sportlich gedacht"</p>
             <div className="programm-text">
               <p>Weiters bietet das Reinhard-Suckert-Symposium eine Vielzahl interessanter Vorträge zu aktuellen Themen der Sportmedizin.</p>
