@@ -75,7 +75,7 @@ export function Start() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Die Österreichische Gesellschaft für Sportmedizin und Prävention (ÖGSMP) richtet im Jahr 2026 bereits zum 59. Mal den Internationalen Fortbildungskongress für Sportmedizin in St. Christoph aus. Dieser Kongress gilt als die traditionsreichste und größte Fortbildungsveranstaltung im Bereich der Sportmedizin in Österreich.
+            Die Österreichische Gesellschaft für Sportmedizin und Prävention (ÖGSMP) richtet im Jahr 2027 bereits zum 60. Mal den Internationalen Fortbildungskongress für Sportmedizin in St. Christoph aus. Dieser Kongress gilt als die traditionsreichste und größte Fortbildungsveranstaltung im Bereich der Sportmedizin in Österreich.
           </motion.p>
           <motion.h3
             className="subsection-title subsection-title--small welcome__schwerpunkte"
