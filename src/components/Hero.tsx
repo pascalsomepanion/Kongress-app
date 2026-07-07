@@ -23,7 +23,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          59. Internationaler
+          60. Internationaler
           <br />
           Kongress <span className="hero__title-word--lowercase">für</span> Sportmedizin
         </motion.h1>
@@ -33,7 +33,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          St. Christoph a. A.
+          St. Christoph am Arlberg
         </motion.p>
         <motion.p
           className="hero__date"
@@ -41,7 +41,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          01.03.2026 – 06.03.2026
+          28.02.2027 – 05.03.2027
         </motion.p>
       </div>
       <ScrollIndicator href="#start" label="Mehr entdecken" />
