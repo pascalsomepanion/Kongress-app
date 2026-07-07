@@ -57,15 +57,15 @@ const INFO_BLOCKS = [
       {
         type: 'highlight',
         title: 'Frühbucherbonus',
-        text: 'Für die Inanspruchnahme des Frühbucherbonus gilt nicht das Anmeldedatum, sondern das Einlangen der gesamten Kongressgebühr bis spätestens 18.1.2026 am Kongresskonto (bitte beachten Sie die entsprechende Bearbeitungszeit der Überweisung durch Ihre Bank). Anschließend wird der Normaltarif verrechnet. Bei verspäteter Einzahlung bitten wir höflich um entsprechende selbständige Anpassung und Einzahlung des zu leistenden Restbetrages.',
+        text: 'Für die Inanspruchnahme des Frühbucherbonus gilt nicht das Anmeldedatum, sondern das Einlangen der gesamten Kongressgebühr bis spätestens 31.12.2026 am Kongresskonto (bitte beachten Sie die entsprechende Bearbeitungszeit der Überweisung durch Ihre Bank). Anschließend wird der Normaltarif verrechnet. Bei verspäteter Einzahlung bitten wir höflich um entsprechende selbständige Anpassung und Einzahlung des zu leistenden Restbetrages.',
       },
       {
         type: 'storno',
         title: 'Stornogebühren',
         items: [
-          { period: 'bis einschließlich 31.12.2025', note: '100% Refundierung' },
-          { period: '1.1. – 31.1.2026', note: '50% Refundierung' },
-          { period: 'Ab 1.2.2026', note: 'keine Rückerstattung' },
+          { period: 'bis einschließlich 31.12.2026', note: '100% Refundierung' },
+          { period: '1.1. – 31.1.2027', note: '50% Refundierung' },
+          { period: 'Ab 1.2.2027', note: 'keine Rückerstattung' },
         ],
       },
       { type: 'notice', text: 'Wir weisen darauf hin, dass der Veranstalter, die Referenten und die Trainer keine wie immer geartete Haftung gegenüber den Teilnehmern oder dritten Personen übernehmen. Die Teilnahme an den Sportveranstaltungen erfolgt auf eigene Gefahr. Der Abschluss einer Haftpflicht- bzw. Unfallversicherung wird empfohlen!' },
@@ -110,9 +110,9 @@ const TAGUNGSORT = {
       type: 'block',
       title: 'Termine',
       rows: [
-        { label: 'Beginn', value: 'Sonntag 01.03.2026, 15:00 Uhr' },
-        { label: 'Eröffnung & Festvortrag', value: 'Sonntag 01.03.2026, 17:00 Uhr' },
-        { label: 'Ende', value: 'Freitag 06.03.2026, 19:00 Uhr' },
+        { label: 'Beginn', value: 'Sonntag 28.02.2027, 15:00 Uhr' },
+        { label: 'Eröffnung & Festvortrag', value: 'Sonntag 28.02.2027, 17:00 Uhr' },
+        { label: 'Ende', value: 'Freitag 05.03.2027, 19:00 Uhr' },
       ],
     },
   ],
