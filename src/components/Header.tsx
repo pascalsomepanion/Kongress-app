@@ -47,9 +47,9 @@ export function Header() {
               <img src="/logo.png" alt="Sportmedizin Arlberg" />
             </a>
             <a href="#" className="header__date" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
-              <span>01.03.2026</span>
+              <span>28.02.2027</span>
               <span>–</span>
-              <span>06.03.2026</span>
+              <span>05.03.2027</span>
             </a>
           </div>
           <nav className="header__nav">
