@@ -31,11 +31,6 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = mobileOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
-  }, [mobileOpen]);
-
   const handleNavClick = () => setMobileOpen(false);
 
   return (
@@ -87,15 +82,15 @@ export function Header() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
+              transition={{ duration: 0.18 }}
               onClick={() => setMobileOpen(false)}
             />
             <motion.div
               className="mobile-menu"
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+              initial={{ opacity: 0, scale: 0.95, y: -8 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: -8 }}
+              transition={{ duration: 0.18, ease: [0.4, 0, 0.2, 1] }}
             >
               {NAV_LINKS.map((link) => (
                 <a
@@ -236,30 +231,29 @@ export function Header() {
           position: fixed;
           inset: 0;
           z-index: 998;
-          background: rgba(10, 22, 40, 0.45);
-          backdrop-filter: blur(2px);
+          background: rgba(10, 22, 40, 0.08);
         }
 
         .mobile-menu {
           position: fixed;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          width: min(78vw, 300px);
+          top: 92px;
+          right: 16px;
+          width: min(62vw, 230px);
           z-index: 999;
-          background: var(--white);
-          padding: 104px 24px 32px;
+          background: rgba(255, 255, 255, 0.82);
+          backdrop-filter: saturate(180%) blur(20px);
+          -webkit-backdrop-filter: saturate(180%) blur(20px);
+          padding: 10px;
           display: flex;
           flex-direction: column;
-          gap: 6px;
-          box-shadow: -8px 0 40px rgba(10, 22, 40, 0.18);
-          border-top-left-radius: 20px;
-          border-bottom-left-radius: 20px;
-          overflow-y: auto;
+          gap: 2px;
+          border-radius: 16px;
+          box-shadow: 0 16px 48px rgba(10, 22, 40, 0.16), 0 4px 12px rgba(10, 22, 40, 0.08);
+          transform-origin: top right;
         }
 
         .mobile-menu__link {
-          padding: 14px 20px;
+          padding: 12px 14px;
           font-weight: 500;
           font-size: 14px;
           letter-spacing: 0.2em;
@@ -270,7 +264,7 @@ export function Header() {
         }
 
         .mobile-menu__link:hover {
-          background: var(--snow);
+          background: rgba(10, 22, 40, 0.06);
         }
 
         .mobile-menu__link--highlight {
