@@ -1,5 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
+const PdfPreview = lazy(() => import('./PdfPreview').then((m) => ({ default: m.PdfPreview })));
+
+function PdfPreviewFallback() {
+  return (
+    <div className="pdf-preview__status">
+      <span className="pdf-preview__spinner" aria-hidden />
+      <p>PDF wird geladen …</p>
+    </div>
+  );
+}
 
 const PDF_ITEMS = [
   { title: 'Programmheft', desc: 'Vollständiges Programmheft als PDF', href: '/Programmheft.pdf' },
@@ -159,11 +170,9 @@ export function Programm() {
                   </div>
                 </div>
                 <div className="pdf-preview__frame-wrap">
-                  <iframe
-                    src={`${selectedPdf.href}#view=FitH`}
-                    title={selectedPdf.title}
-                    className="pdf-preview__iframe"
-                  />
+                  <Suspense fallback={<PdfPreviewFallback />}>
+                    <PdfPreview href={selectedPdf.href} />
+                  </Suspense>
                 </div>
               </motion.div>
             </motion.div>
