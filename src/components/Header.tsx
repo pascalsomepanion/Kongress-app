@@ -252,25 +252,37 @@ export function Header() {
         }
 
         @media (max-width: 900px) {
-          .header {
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 2px 20px rgba(10, 22, 40, 0.08);
-          }
           .header__nav { display: none; }
           .header__menu-btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--navy);
-            filter: none;
           }
           .header__left { align-items: center; }
-          .header__date { display: none; }
           .header__logo img {
             width: 56px;
             height: 56px;
+          }
+
+          .header__inner { position: relative; }
+
+          .header__date {
+            display: flex;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            gap: 3px;
+            pointer-events: auto;
+          }
+
+          .header.scrolled {
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+            box-shadow: 0 1px 0 rgba(10, 22, 40, 0.06), 0 8px 24px rgba(10, 22, 40, 0.06);
           }
         }
 
