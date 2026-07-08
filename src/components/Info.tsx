@@ -65,7 +65,7 @@ const INFO_BLOCKS = [
         items: [
           { period: 'bis einschließlich 31.12.2026', note: '100% Refundierung' },
           { period: '1.1. – 31.1.2027', note: '50% Refundierung' },
-          { period: 'Ab 1.2.2027', note: 'keine Rückerstattung' },
+          { period: 'Ab 1.2.2027', note: 'keine Refundierung' },
         ],
       },
       { type: 'notice', text: 'Wir weisen darauf hin, dass der Veranstalter, die Referenten und die Trainer keine wie immer geartete Haftung gegenüber den Teilnehmern oder dritten Personen übernehmen. Die Teilnahme an den Sportveranstaltungen erfolgt auf eigene Gefahr. Der Abschluss einer Haftpflicht- bzw. Unfallversicherung wird empfohlen!' },
