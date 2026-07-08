@@ -44,7 +44,7 @@ export function Hero() {
           28.02.2027 – 05.03.2027
         </motion.p>
       </div>
-      <ScrollIndicator href="#start" label="Mehr entdecken" />
+      <ScrollIndicator href="#start" label="mehr entdecken" />
     </section>
   );
 }
