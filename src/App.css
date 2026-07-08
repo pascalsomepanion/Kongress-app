@@ -1590,6 +1590,10 @@
   justify-self: center;
 }
 
+.footer__quote-break {
+  display: none;
+}
+
 .footer__logo {
   justify-self: start;
 }
@@ -1625,9 +1629,13 @@
     order: 2;
     padding: 0;
   }
+  .footer__quote-break {
+    display: block;
+  }
   .footer__copyright {
     order: 3;
     text-align: center;
+    font-size: 0.6rem;
   }
 }
 
