@@ -14,7 +14,7 @@ export function Footer() {
             <img src="/logo-footer.png" alt="Sportmedizin Arlberg" />
           </div>
           <blockquote className="footer__quote">
-            Sportmedizin im Herzen der Alpen. Wissen, das bewegt!
+            Sportmedizin im Herzen der Alpen.<br className="footer__quote-break" /> Wissen, das bewegt!
           </blockquote>
           <div className="footer__copyright">
             © Prof. h.c. Univ.-Doz. Dr. Günther Neumayr
