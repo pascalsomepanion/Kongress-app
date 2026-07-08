@@ -1518,13 +1518,12 @@
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: contain;
   padding: 24px 16px 32px;
-  display: flex;
-  justify-content: center;
 }
 
 .pdf-preview__pages {
   width: 100%;
   max-width: 760px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1533,6 +1532,7 @@
 .pdf-page {
   position: relative;
   width: 100%;
+  flex-shrink: 0;
   background: var(--white);
   border-radius: 6px;
   overflow: hidden;
@@ -1574,7 +1574,8 @@
 }
 
 .pdf-preview__status {
-  margin: auto;
+  margin: 15vh auto 0;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
