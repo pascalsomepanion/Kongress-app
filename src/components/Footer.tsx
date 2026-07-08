@@ -17,7 +17,9 @@ export function Footer() {
             Sportmedizin im Herzen der Alpen.<br className="footer__quote-break" /> Wissen, das bewegt!
           </blockquote>
           <div className="footer__copyright">
-            © Prof. h.c. Univ.-Doz. Dr. Günther Neumayr
+            <a href="https://neumayr-lienz.at/" target="_blank" rel="noopener noreferrer">
+              © Prof. h.c. Univ.-Doz. Dr. Günther Neumayr
+            </a>
           </div>
         </motion.div>
       </div>
