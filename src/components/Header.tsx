@@ -31,6 +31,11 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
+
   const handleNavClick = () => setMobileOpen(false);
 
   return (
@@ -76,24 +81,34 @@ export function Header() {
 
       <AnimatePresence>
         {mobileOpen && (
-          <motion.div
-            className="mobile-menu"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-          >
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`mobile-menu__link ${link.label === 'Anmeldung' ? 'mobile-menu__link--highlight' : ''}`}
-                onClick={handleNavClick}
-              >
-                {link.label}
-              </a>
-            ))}
-          </motion.div>
+          <>
+            <motion.div
+              className="mobile-menu-overlay"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setMobileOpen(false)}
+            />
+            <motion.div
+              className="mobile-menu"
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'tween', duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            >
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`mobile-menu__link ${link.label === 'Anmeldung' ? 'mobile-menu__link--highlight' : ''}`}
+                  onClick={handleNavClick}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
 
@@ -217,18 +232,30 @@ export function Header() {
           filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
         }
 
+        .mobile-menu-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 998;
+          background: rgba(10, 22, 40, 0.45);
+          backdrop-filter: blur(2px);
+        }
+
         .mobile-menu {
           position: fixed;
-          top: 84px;
-          left: 0;
+          top: 0;
           right: 0;
+          bottom: 0;
+          width: min(78vw, 300px);
           z-index: 999;
           background: var(--white);
-          padding: 24px;
+          padding: 104px 24px 32px;
           display: flex;
           flex-direction: column;
-          gap: 8px;
-          box-shadow: var(--shadow-lg);
+          gap: 6px;
+          box-shadow: -8px 0 40px rgba(10, 22, 40, 0.18);
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          overflow-y: auto;
         }
 
         .mobile-menu__link {
@@ -284,10 +311,6 @@ export function Header() {
             -webkit-backdrop-filter: saturate(180%) blur(20px);
             box-shadow: 0 1px 0 rgba(10, 22, 40, 0.06), 0 8px 24px rgba(10, 22, 40, 0.06);
           }
-        }
-
-        @media (max-width: 900px) {
-          .mobile-menu { top: 88px; }
         }
       `}</style>
     </>
