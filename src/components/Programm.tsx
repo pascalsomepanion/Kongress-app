@@ -1,4 +1,5 @@
 import { useState, useEffect, lazy, Suspense } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const PdfPreview = lazy(() => import('./PdfPreview').then((m) => ({ default: m.PdfPreview })));
@@ -127,57 +128,60 @@ export function Programm() {
           ))}
         </div>
 
-        <AnimatePresence>
-          {selectedPdf && (
-            <motion.div
-              className="pdf-preview"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedPdf(null)}
-            >
+        {createPortal(
+          <AnimatePresence>
+            {selectedPdf && (
               <motion.div
-                className="pdf-preview__content"
-                initial={{ scale: 0.95, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-                onClick={(e) => e.stopPropagation()}
+                className="pdf-preview"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setSelectedPdf(null)}
               >
-                <div className="pdf-preview__header">
-                  <span className="pdf-preview__title">{selectedPdf.title}</span>
-                  <div className="pdf-preview__actions">
-                    <a
-                      href={selectedPdf.href}
-                      download
-                      className="pdf-preview__download-btn"
-                    >
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                        <polyline points="7 10 12 15 17 10"/>
-                        <line x1="12" y1="15" x2="12" y2="3"/>
-                      </svg>
-                      Download
-                    </a>
-                    <button
-                      type="button"
-                      className="pdf-preview__close"
-                      onClick={() => setSelectedPdf(null)}
-                      aria-label="Vorschau schließen"
-                    >
-                      ×
-                    </button>
+                <motion.div
+                  className="pdf-preview__content"
+                  initial={{ scale: 0.95, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0.95, opacity: 0 }}
+                  transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="pdf-preview__header">
+                    <span className="pdf-preview__title">{selectedPdf.title}</span>
+                    <div className="pdf-preview__actions">
+                      <a
+                        href={selectedPdf.href}
+                        download
+                        className="pdf-preview__download-btn"
+                      >
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                          <polyline points="7 10 12 15 17 10"/>
+                          <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        Download
+                      </a>
+                      <button
+                        type="button"
+                        className="pdf-preview__close"
+                        onClick={() => setSelectedPdf(null)}
+                        aria-label="Vorschau schließen"
+                      >
+                        ×
+                      </button>
+                    </div>
                   </div>
-                </div>
-                <div className="pdf-preview__frame-wrap">
-                  <Suspense fallback={<PdfPreviewFallback />}>
-                    <PdfPreview href={selectedPdf.href} />
-                  </Suspense>
-                </div>
+                  <div className="pdf-preview__frame-wrap">
+                    <Suspense fallback={<PdfPreviewFallback />}>
+                      <PdfPreview href={selectedPdf.href} />
+                    </Suspense>
+                  </div>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+            )}
+          </AnimatePresence>,
+          document.body
+        )}
 
         <div className="programm-subsections">
           <motion.div
