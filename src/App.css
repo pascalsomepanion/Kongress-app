@@ -1684,12 +1684,29 @@
     flex-wrap: wrap;
     gap: 12px;
   }
-  .pdf-preview__title {
-    width: 100%;
-    order: 1;
-  }
+  /* Wrapper layouttechnisch auflösen, damit Download und X
+     unabhängig voneinander platziert werden können */
   .pdf-preview__actions {
+    display: contents;
+  }
+  .pdf-preview__title {
+    order: 1;
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .pdf-preview__close {
     order: 2;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  .pdf-preview__download-btn {
+    order: 3;
+    width: 100%;
+    justify-content: center;
   }
   .pdf-preview__scroll {
     padding: 16px 10px 24px;
