@@ -14,6 +14,7 @@ function PdfPreviewFallback() {
 }
 
 const ARCHIV_ITEMS: { year: number; href: string }[] = [
+  { year: 2026, href: '/archiv/Programmheft2026.pdf' },
   { year: 2025, href: '/archiv/Programmheft2025.pdf' },
   { year: 2024, href: '/archiv/Programmheft2024.pdf' },
   { year: 2023, href: '/archiv/Programmheft2023.pdf' },
